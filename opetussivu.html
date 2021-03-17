@@ -7,7 +7,10 @@
 
 <body>
     <h1>HTML Perusteita</h1>
-    <img src="html-5-logo.png" width="200" height="170>" <BR><BR><BR>
+    <p>HTML 5 on nykyaikainen HTML-merkintäkieli, jossa sovellukset toteutetaan HTML, CSS ja Javascript-tekniikoilla.
+    </p>
+    <img src="html-5-logo.png" alt=HTLM5 width="200" height="170" />
+    <br>
     <p1><b>HTML-sivu rakentuu seuraavista osista:</b>
         <ul>
             <li>HTML - Html dokumentin juurielementti</li>
@@ -20,16 +23,116 @@
             <li>H1,H2,H...- eri tasoiset otsikot</li>
         </ul>
         Elementeillä on (yleensä) alku ja loppu.
-        <BR> Elementin alku merkitään: <i>
+        <BR> Elementin alku merkitään esim.: <i>
             < html>
         </i>
-        <BR>ja elementti loppu merkintään: <i>
+        <BR>ja elementti loppu merkintään esim.: <i>
             < /html>
+
         </i>
-        <BR> Yksinkertaisen mallin HTML-rakenteesta löydät <a
-            href="https://www.w3schools.com/html/default.asp">w3schools.com </a> -sivustolta. Samalla sivulla voit
-        myös harjoitella HTML-koodin kirjoittamista.
+        <BR><BR>HTML-sivun kirjoittaminen aloitetaan komennolla: <i>
+            < !DOCTYPE html>
+        </i>
+        <BR>Tätä seuraa html-elementin aloitus ja lopetus tagit<i>
+            < html> ja < / html>
+        </i>
+        <BR> joiden väliin rakennetaan itse html-koodi.
+        <BR>
+        <BR>
+        <h3>Esimerkki HTML-koodin rakenteesta:</h3>
+        <ol>
+            <li>
+                < !DOCTYPE html>
+            </li>
+
+            <li>
+                < html>
+            </li>
+
+            <li>
+                < head>
+            </li>
+
+            <li>
+                < title> <b>Tähän kirjoitetaan sivun nimi</b>
+                    < /title>
+            </li>
+            <li>
+                < /head>
+            </li>
+            <li>
+                < body> <i>varsinaisen sivun siltö tulee 'body'-tagien sisälle.</i>
+            </li>
+
+            <li>
+                < h1><b>Tässä on ykköstason (eli isoin) otsikko</b>
+                    < /h1>
+            </li>
+            <li>
+                < p><b>P-tagien sisään kirjoitetaan sivun kappaleet.</b>
+                    < /p>
+            </li>
+
+            <li>
+                < /body>
+            </li>
+            <li>
+                < /html>
+            </li>
+        </ol>
+        <BR> Yksinkertaisen mallin HTML-rakenteesta löydät myös
+        <a href="https://www.w3schools.com/html/default.asp">w3schools.com
+        </a> -sivustolta. Samalla sivustolla pystyt myös
+        harjoittelemaan HTML-koodin kirjoittamista.
     </p1>
+    <BR>
+    <p2>
+        <h4>Tyhjät elementit</h4>
+        Elementti, jolla ei ole sisältöä (esim. muita elementtejä) kutsutaan tyhjiksi elementeiksi
+        <Br> Tyhjälle elementille ei tarvita erillistä lopputunnistetta, mutta loppuun voidaan lisätä '/>',
+        <Br> jolloin elementistä tulee XHTML-yhteensopiva
+        <Br>
+        <h4>Esimerkkejä tyhjistä elementeistä:</h4>
+        <table>
+            <Style>
+                td,
+                th {
+                    border: 1px solid
+                }
+            </Style>
+            <tr>
+                <th>Elementti</th>
+                <th>Selite</th>
+            </tr>
+            <tr>
+                <td>BR</td>
+                <td>Rivin vaihto (!HUOM! ilman tätä rivinvaihto ei näy käyttäjälle)
+                </td>
+            </tr>
+            <tr>
+                <td>IMG</td>
+                <td>Kuva</td>
+            </tr>
+            <tr>
+                <td>HR</td>
+                <td>Vaakaviiva (tekstin väliin)</td>
+            </tr>
+            <tr>
+                <td>INPUT</td>
+                <td>Syöttökenttä</td>
+            </tr>
+            <tr>
+                <td>LINK</td>
+                <td>Linkki toiseen resurssiin </td>
+            </tr>
+            <tr>
+                <td>META</td>
+                <td>Metatietoa esim. sivun koodauksesta</td>
+            </tr>
+        </table>
+
+    </p2>
+
 </body>
 
 </html>
