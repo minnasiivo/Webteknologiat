@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="asettelu.css" />
+    <title>**testi**</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="head">
+            <div class="flex-container">
+                <div class="A">
+                    <h1>GRID-astettelun käyttö nettisivuilla</h1>
+                </div>
+                <div class="B"> <img src="dino.gif" atl=Dino width="100" height="100" /></div>
+            </div>
+        </div>
+
+        <div class="side">
+            <div><a href="#1">Grid-layout</a></div>
+            <div><a href="#2">Välit</a></div>
+            <div><a href="#3">Sisällön asettelu</a></div>
+            <div><a href="#4">Käyttö</a></div>
+            <div><a href="#5">Linkkejä</a></div>
+        </div>
+
+        <div class="m1">
+            <h2 id="1">Grid-layout</h2>
+            <p>CSS Grid layout on kaksiulotteinen taulukko, johon asetellaan käyttöliittymän komponentit.
+                'Itemit' asetellaan containeriin. Cointainerille määritellään tila joka käyttää Grid-layoutia.
+                Annetaan riveille ja sarakkeille niiden käytettävissä oleva koko. Gridin solut voidaan varata
+                alueille.
+            </p>
+            <div class="flex-container">
+                <div>
+                    <img src=CSS-layout-1.png alt=Grid width="300" height="250" />
+                </div>
+                <div>
+                    <p>Tässä esimerkiksi aseteltuna viisi riviä ja viisi saraketta:<BR>
+                        <BR>"header header header header header"
+                        <BR>"aside aside article article article"
+                        <BR>"aside aside article article article"
+                        <BR>"aside aside image image image"
+                        <BR>"footer footer footer footer footer"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="m2">
+            <div class="flex-container">
+                <div>
+                    <h2 id="2">Välit</h2>
+                    <p>Solujen väli voidaan myös määritellä, asettamalla column.cap ja row-cap.
+                        Samoin voidaan asetella mihin solun sisältö asettuu vaaka-(justify-items) ja
+                        pystytasossa(align-items).
+                    </p>
+                </div>
+                <div><img src="rullalautailu.jpg" atl=Saurus width="100" height="100" /></div>
+            </div>
+        </div>
+
+        <div class="m3">
+            <h2 id="3">Sisällön asettelu</h2>
+            <p>Sisältö pitää asettaa joko jollekin alueelle tai suluun/soluihin. </p>
+            <div class="flex-container">
+                <div class="A"><img src=lines.png alt=asettelu width="400" height="400" /></div>
+                <div class="B">
+                    <p> <BR> .My-item {
+                        <BR> grid-column-start: 2;
+                        <BR> grid-column-end: five;
+                        <BR> grid-row-start: row1-start;
+                        <BR> grid-row-end: 3;
+                        <BR> }
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="m4">
+            <h2 id="4">Käyttö</h2>
+            <div class="flex-container">
+                <div class="A">
+                    <p> Grid-layoutia käytetään nettisivuilla, jotta voidaan märittää se, miten sivut eri elementit
+                        sijoittuvat suhteessa toisiinsa.
+                        Gridin muotoiluilla vaikutetaan myös siihen, miten eri elementit asettuvat kun sivu avataan eri
+                        kokoisilla näytöillä.
+                        Tarkoitus on luoda sivusta käyttäjälle mahdollisimman selkeä ja helppokäyttöinen riippumatta
+                        siitä millä laitteella sivu avataan.
+                        Tämä sivu on rakennettu käyttäen sitä Grid-layoutia, jonka sisään on laitettu vielä elementtejä
+                        flexboxeihin. Näin sivun eri osioit
+                        on saatu asettumaan halutulla tavoin taulukkoon. Lisäksi sivu pysyy luettavana ja rakenne
+                        sopeutuu aina sovellusikkunan koon muutoksiin.
+                    </p>
+                </div>
+                <div class="B"> <img src="dinosaur-drawing.png" atl=Dino width="100" height="100" /></div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <h2 id="5">Linkkejä</h2>
+            <p>Näistä linkeistä löydät lisätietoa Gridin ja Flexboxin käytöstä</p>
+            <div class="flex-container">
+                <div class="link">
+
+                    <a href=https://www.w3schools.com/css/css_grid.asp>W3Schools - Grid</a>
+                </div>
+                <div class="link">
+
+                    <a href=https://css-tricks.com/snippets/css/complete-guide-grid>CSS-tricks - Grid</a>
+                </div>
+                <div class="link">
+
+                    <a href=https://www.w3schools.com/csS/css3_flexbox.asp>W3Schools - Flexbox</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
