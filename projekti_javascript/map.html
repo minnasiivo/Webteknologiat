@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartta</title>
+</head>
+
+<body onload="init()">
+
+    <iframe id="map" title="map" width="550" height="450"
+        src="https://www.google.com/maps?q=Skinnarilankatu34lappeenranta&output=embed"></iframe>
+    <div class="input-container">
+        <label for="address">Katuosoite:</label>
+        <input type="text" id="address" class="label" name="address">
+        <label for="city">Kaupunki:</label>
+        <input type="text" id="city" class="label" name="city">
+        <button type="button" class="btn" onclick="search()">Hae</button>
+
+
+        <script defer src="script/map.js"></script>
+</body>
+
+</html>
