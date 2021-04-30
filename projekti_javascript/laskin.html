@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Laskuri</title>
+</head>
+
+<body onload="init();">
+
+    <div class="container">
+        <div class="head">
+            <h1>Valitse numerot ja laske</h1>
+            <p1>Ohjelma arpoo satunnaiset kokonaisluvut väliltä 1 - 10. Voit muokata lukuja,
+                valitse laskuoperaattori ja paina laske suorittaaksesi laskun. </p1>
+        </div>
+        <div class="flex-container">
+            <div class="A">
+                <button type="button" class="btn" id="subsBtn1">-</button>
+                <input type="text" id="textInput1" name="textInput1">
+                <button type="button" class="btn" id="addBtn1">+</button>
+            </div>
+            <div class="B">
+                <select class="form-select" id="operationSelect">
+                    <option selected value="1">+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="C">
+                <button type="button" class="btn" id="subsBtn2">-</button>
+                <input type="text" id="textInput2">
+                <button type="button" class="btn" id="addBtn2">+</button>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <button type="button" class="btn" id="resultBtn">LASKE</button>
+        </div>
+
+        <div class="flex-container">
+            <div id="result">tulos:</div>
+            <div id="counter">Laskuja tehty yhteensä:</div>
+        </div>
+
+
+        <div id="dialog" title="Basic dialog">
+            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
+                resized and closed with the &apos;x&apos; icon.</p>
+        </div>
+    </div>
+
+
+    <script defer src="script/laskin.js"></script>
+</body>
+
+</html>
