@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="styles.css">
+</head>
+
+<body>
+    <form>
+
+
+
+        <fieldset class="container">
+            <legend>Contact information</legend>
+
+            <div class="container">
+                <labelfor="fname">First name:</label>
+                    <input type="text" id="fname" class="label" name="fname">
+                    <div class="container">
+                    </div>
+                    <div class="input-container">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="input-container">
+                        <label for="telephone">Telephone:</label>
+                        <input type="phone" id="phone" name="phone">
+                    </div>
+            </div>
+            <div class="container">
+                <label>Prefered contact method:</label>
+                <div class="input-container">
+                    <input type="checkbox" id="selectemail" value="selectemail">
+                    <label for="selectemail">Email
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="selectphone" value="selectphone">
+                    <label for="selectphone">Phone
+                </div>
+            </div>
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend>Feedback</legend>
+
+
+            <label for="message">Message subject:</label>
+            <input type="text" id="message" name="message">
+
+
+            <td colspan="2"><textarea id="feedback" name="feedback" rows="10" cols="55"></textarea>
+
+
+
+                <label for="attachFile">Attach a file:</label>
+                <input type="file" id="file" name="file">
+
+
+            <td colspan="2"><input id="SendButton" type="submit" value="send">
+
+
+        </fieldset>
+
+
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FLEXBOX</title>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles-gridi.css" />
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="header">
+            <div>
+                <h1>GRID-astettelun käyttö nettisivuilla</h1>
+            </div>
+
+        </div>
+        <div class="side">
+            <img src="dino.gif" atl=Dino width="100" height="100" />
+        </div>
+
+        <div class="sidebar">
+            <div><a href="#1">First</a></div>
+            <div><a href="#2">second</a></div>
+            <div><a href="#3">Third</a></div>
+            <div><a href="#4">Fourth</a></div>
+            <div><a href="#5">Fifth</a></div>
+            <div><a href="#6">Sixt</a></div>
+
+        </div>
+        <div class="main">
+            <h2 id="1">First chapter</h2>
+            <p>CSS Grid layout on kaksiulotteinen taulukko, johon asetellaan käyttöliittymän komponentit.
+                'Itemit' asetellaan containeriin. Cointainerille määritellään tila joka käyttää Grid-layoutia.
+                Annetaan riveille ja sarakkeille niiden käytettävissä oleva koko. Gridin solut voidaan varata alueille.
+            </p>
+            <img src=CSS-layout-1.png alt=Grid width="200" height="200" />
+            <p id="gridi-kuva">
+            <div> tässä esimerkiksi käytössä viisi riviä ja viisi saraketta
+                <BR>"header header header header header"
+                <BR>"aside aside article article article"
+                <BR>"aside aside article article article"
+                <BR>"aside aside image image image"
+                <BR>"footer footer footer footer footer"
+            </div>
+            <div> <BR> Sisältö voidaan sitten asetella näille alueille
+                <BR> .item-a { grid-area: header; }
+                <BR> .item-b { grid-area: article; }
+                <BR> .item-c { grid-area: aside; }
+                <BR> .item-d { grid-area: footer; }
+            </div>
+            </p>
+            <h2 id="2">Välit</h2>
+            <p>Solujen väli voidaan myös määritellä, asettamalla column.cap ja row-cap.
+                Samoin voidaan asetella mihin solun sisältö asettuu vaaka-(justify-items) ja pystytasossa(align-items).
+            </p>
+            <h2 id="3">Sisällön asettelu</h2>
+            <p>Sisältö pitää asettaa joko jollekin alueelle tai suluun/soluihin. </p>
+            <div>
+                <div> <img src=asettelu.png alt=asettelu width="200" height="200" /></div>
+                <div>
+                    <p> <BR> .item-a {
+                        <BR> grid-column-start: 2;
+                        <BR> grid-column-end: five;
+                        <BR> grid-row-start: row1-start;
+                        <BR> grid-row-end: 3;
+                        <BR> }
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-item">
+                <h2 id="4">Fourth chapter</h2>
+                <p>tähän tekstikappale...</p>
+                <h2 id="5">Fifht chapter</h2>
+                <p>tähän tekstikappale...</p>
+                <h2 id="6">Sixth chapter</h2>
+                <p>tähän tekstikappale...</p>
+            </div>
+            <div class="main-item">
+                <img src="nurmikko.jpg" width="150" height=150>
+            </div>
+        </div>
+        <div class="footer">
+            <ul>
+                <h2>Linkkejä</h2>
+
+                <li><a href=https://lab.fi/fi>LAB</a></li>
+                <li><a href=https://www.lut.fi>LUT</a></li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

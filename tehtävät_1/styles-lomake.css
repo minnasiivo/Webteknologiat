@@ -1,0 +1,56 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 60%;
+    margin: auto;
+}
+form {
+    background-color:rgb(6, 20, 37);
+    max-width:37rem;
+}
+fieldset{
+    background-color: #42668a;
+border-radius: 10px;
+border-style: dotted;
+margin: 5px;
+}
+legend{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+input, textarea{
+    border-radius: 4px;
+    border-width: 1px;
+    border-color:cadetblue
+}
+input:focus, textarea:focus{
+    background-color: lightsteelblue;
+}
+input[type=file]{
+    width: 7.5em;
+    overflow: hidden;
+}
+input[type=submit]{
+    border-color:black;
+}
+label.label{
+    color:navy
+}
+input[type=text], input[type=email], input[type=phone], textarea{
+    width:100%;
+}
+textarea{
+    height: 150px;
+    resize: none;
+    min-width: 7em;
+}
+td{
+    padding-left:5px;
+    padding-right:5px;
+}
+#SendButton{
+    float: right;
+}
