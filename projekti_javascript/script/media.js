@@ -22,7 +22,7 @@ function init() {
     } else {
         index = 0;
     }
-    $("myMedia").slideDown("slow");
+
     //intervalTimer = setInterval(getNextPicture, 2000);
     isStarted = true;
     // vian etsintää
@@ -40,7 +40,8 @@ function getNextPicture() {
 
     $("#nameDiv").html(pictures_array[index].title);
     $('#pictures').attr("src", pictures_array[index].src);
-
+    //__________________________EFEKTIN LISÄÄMISESSÄ ONGELMIA ;(____________________________
+    $("#pictures").slideDown("slow").slideUp("slow");
     localStorage.setItem(localStorageKey, index);
 }
 

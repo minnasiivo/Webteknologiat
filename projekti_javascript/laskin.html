@@ -9,6 +9,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/laskin.css">
 
     <title>Laskuri</title>
 </head>
@@ -18,9 +19,13 @@
     <div class="container">
         <div class="head">
             <h1>Valitse numerot ja laske</h1>
-            <p1>Ohjelma arpoo satunnaiset kokonaisluvut väliltä 1 - 10. Voit muokata lukuja,
-                valitse laskuoperaattori ja paina laske suorittaaksesi laskun. </p1>
+            <p1>Ohjelma arpoo satunnaiset kokonaisluvut väliltä 1 - 10.
+                <br> Voit muokata lukuja, valitse laskuoperaattori ja paina laske suorittaaksesi laskun.
+            </p1>
         </div>
+
+        <div id="dialogbox" title="Error">Value out of range!</div>
+
         <div class="flex-container">
             <div class="A">
                 <button type="button" class="btn" id="subsBtn1">-</button>
@@ -52,10 +57,8 @@
         </div>
 
 
-        <div id="dialog" title="Basic dialog">
-            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
-                resized and closed with the &apos;x&apos; icon.</p>
-        </div>
+
+    </div>
     </div>
 
 

@@ -24,14 +24,29 @@ let choiseVal = $("#operationSelect").val();
 $(function () {
     init();
 });
-
+// Asetetaan satunnaisluvut sivun latauksen yhteydessä
 function init() {
     $("#textInput1").val(randomInt(1, 10));
+    textValue1 = $("#textInput1").val();
+    value1 = parseInt(textValue1);
     $("#textInput2").val(randomInt(1, 10));
+    textValue2 = $("#textInput2").val();
+    value2 = parseInt(textValue2);
     $("#result").val(0);
     $("#counter").html("Laskuja suoritettu " + count + " kpl");
+
+
+    $("#dialogbox").dialog({
+        autoOpen: false
+    })
+
+
+    alert("TERVETULOA LASKEMAAN");
+
 };
 
+
+// Painikkeet:
 
 $("#addBtn1").click(add1);
 $("#subsBtn1").click(substrack1);
@@ -39,15 +54,16 @@ $("#addBtn2").click(add2);
 $("#subsBtn2").click(substrack2);
 $("#resultBtn").click(calculate);
 
-$(function () {
-    $("#dialog").dialog();
-});
+
+
 
 function randomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+
+
 
 function calculate() {
 
@@ -80,23 +96,18 @@ function calculate() {
 
     count++;
     $("#counter").html("Laskuja suoritettu " + count + " kpl");
-
-
-
-    /* result = new Laskin(value1, value2, choiceVal)
-     $("#result").html("Tulos: " + result.counter);
- 
-     count++;
-     $("#counter").html("Laskuja suoritettu " + count + " kpl");*/
 };
 
 
 
 function add1() {
-
     textValue1 = $("#textInput1").val();
     value1 = parseInt(textValue1);
     value1++;
+
+    if (value1 > 10 || value1 < 1) {
+        $("#dialogbox").dialog("open");
+    }
 
     $("#textInput1").val(value1);
     console.log(value1);
@@ -106,14 +117,23 @@ function substrack1() {
     textValue1 = $("#textInput1").val();
     value1 = parseInt(textValue1);
     value1--;
+
+    if (value1 > 10 || value1 < 1) {
+        $("#dialogbox").dialog("open");
+    }
     $("#textInput1").val(value1);
+
 }
 function add2() {
 
     textValue2 = $("#textInput2").val();
     value2 = parseInt(textValue2);
     value2++;
-    num2 = value2;
+
+    if (value2 > 10 || value2 < 1) {
+        $("#dialogbox").dialog("open");
+    }
+
     $("#textInput2").val(value2);
 }
 
@@ -121,9 +141,27 @@ function substrack2() {
     textValue2 = $("#textInput2").val();
     value2 = parseInt(textValue2);
     value2--;
+
+    if (value2 > 10 || value2 < 1) {
+        $("#dialogbox").dialog("open");
+    }
+
     num2 = value2;
     $("#textInput2").val(value2);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// LUOKKA LASKIN ----- EI VALMIS ;D
 
 class Laskin {
     constructor(num1, num2, select) {
@@ -136,3 +174,25 @@ class Laskin {
         return num1 + this.num2;
     }
 }
+
+/*
+    // Ilmoitukset dialogiin:
+
+    // Nollalla jakaminen
+    function devideZero() {
+        if (value2 == 0) {
+            if (choiseVal == 4) {
+                window.alert("HUOM!! nollalla ei voi jakaa!");
+            }
+        }
+    }
+
+    $(function () {
+        $("#dialog").dialog();
+    });
+
+    $(".selector").dialog({
+        appendTo: "textInput2"
+
+
+*/

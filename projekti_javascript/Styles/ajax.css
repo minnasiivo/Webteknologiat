@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #d8ee76;
+    padding: 10px;
+    
+}
+.grid-item {
+    background-color: rgba(235, 173, 131, 0.8);
+    border: 1px solid rgba(224, 135, 33, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  button {
+      width: 100%;
+      background-color: rgb(209, 206, 17);
+      padding: 20px;
+      text-align: center;
+      border:2px solid darkorange;
+      border-radius: 9px;
+      font-size: 1em;
+      transition-duration: 0.3s;
+}
+button:hover{
+    background-color: rgb(85, 219, 107);
+}
+
+#counter{
+    font-size: small;
+}
+#counterCN{
+    font-size: small;
+}

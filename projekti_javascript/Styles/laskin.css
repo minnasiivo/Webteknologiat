@@ -1,0 +1,40 @@
+*{
+    margin: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn{
+border-radius: 9px;
+background-color: lightseagreen;
+transition-duration: 0.3s;
+}
+.btn:hover{
+    background-color: lightsteelblue;
+}
+
+#resultBtn{
+    font-size: 16px;
+    padding: 12px  8em;
+}
+
+.flex-container{
+   margin-left: 4em;
+}
+
+.form-select{
+    border-radius: 9px;
+    background-color: rgb(169, 240, 216);
+    padding: 8px 9em;
+}
+
+input{
+    text-align: center;
+}
+
+#result{
+    font-size: x-large;
+}
+
+h1{
+    letter-spacing: 4px;
+}

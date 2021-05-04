@@ -1,0 +1,22 @@
+.container{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+iframe{
+    margin:8px;
+}
+button{
+    background-color: black;
+    color:cornsilk;
+    border-radius: 8px;
+    border:2px solid grey;
+    transition-duration: 0.4s;
+    width: 10%;
+    
+}
+
+button:hover{
+    background-color: rgb(77, 26, 26);
+}
