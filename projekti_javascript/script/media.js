@@ -4,7 +4,7 @@ let index;
 let intervalId;
 let isStarted;
 let localStorageKey = 'imageId';
-var intervalTimer = window.setInterval(getNextPicture, 2000);
+var intervalTimer = window.setInterval(getNextPicture, 5000);
 
 $(function () {
     init();
@@ -40,8 +40,10 @@ function getNextPicture() {
 
     $("#nameDiv").html(pictures_array[index].title);
     $('#pictures').attr("src", pictures_array[index].src);
-    //__________________________EFEKTIN LISÄÄMISESSÄ ONGELMIA ;(____________________________
-    $("#pictures").slideDown("slow").slideUp("slow");
+
+    $("#pictures").fadeOut("slow", function () {
+        $("#pictures").show();
+    });
     localStorage.setItem(localStorageKey, index);
 }
 
@@ -55,7 +57,9 @@ function getPreviousPicture() {
 
     $("#nameDiv").html(pictures_array[index].title);
     $('#pictures').attr("src", pictures_array[index].src);
-
+    $("#pictures").fadeOut("slow", function () {
+        $("#pictures").show();
+    });
     localStorage.setItem(localStorageKey, index);
 
 }
@@ -68,7 +72,7 @@ function pausePictures() {
         $("#pauseBtn").html('&#9654');
     }
     else {
-        intervalTimer = window.setInterval(getNextPicture, 2000);
+        intervalTimer = window.setInterval(getNextPicture, 5000);
         isStarted = true;
         $("#pauseBtn").html('&#8741');
 
@@ -76,20 +80,3 @@ function pausePictures() {
 }
 
 
-
-/*
-
-let cats_json =
-    '[{"name":"pilli", "src" :"pilli.jpg"},
-{ "name": "Pulla", "src": "Pulla.jpg" }]';
-
-let cats_array = JSON.parse(cats_json);
-
-cats_array[index].src
-cats_array[index.name]
-
-let ajastus = window.setInterval(funktionNimi, millisekunnit);
-
-// toiston peruminen
-
-window.clearInterval(ajastus);*/

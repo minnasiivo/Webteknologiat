@@ -1,15 +1,4 @@
-/*
-window.onload = function () {
-    document.getElementById("textInput1").value = 0;
-    document.getElementById("textInput2").value = 0;
-    document.getElementById("result").value = 0;
-    document.getElementById("counter").innerHTML = "Laskuja suoritettu" + counter + "kpl";
-}
-function showResult() {
-    counter = counter + 1;
-    document.getElementById("counterCol").innerHTML = "Laskuja suoritettu" + counter + "kpl";
-}
-*/
+
 var textValue1 = $("#textInput1").val();
 var value1 = parseInt(textValue1);
 var textValue2 = $("#textInput2").val();
@@ -36,7 +25,7 @@ function init() {
     $("#counter").html("Laskuja suoritettu " + count + " kpl");
 
 
-    $("#dialogbox").dialog({
+    $("#dialog").dialog({
         autoOpen: false
     })
 
@@ -106,7 +95,7 @@ function add1() {
     value1++;
 
     if (value1 > 10 || value1 < 1) {
-        $("#dialogbox").dialog("open");
+        $("#dialog").dialog("open");
     }
 
     $("#textInput1").val(value1);
@@ -119,7 +108,7 @@ function substrack1() {
     value1--;
 
     if (value1 > 10 || value1 < 1) {
-        $("#dialogbox").dialog("open");
+        $("#dialog").dialog("open");
     }
     $("#textInput1").val(value1);
 
@@ -131,7 +120,7 @@ function add2() {
     value2++;
 
     if (value2 > 10 || value2 < 1) {
-        $("#dialogbox").dialog("open");
+        $("#dialog").dialog("open");
     }
 
     $("#textInput2").val(value2);
@@ -143,19 +132,70 @@ function substrack2() {
     value2--;
 
     if (value2 > 10 || value2 < 1) {
-        $("#dialogbox").dialog("open");
+        $("#dialog").dialog("open");
     }
 
-    num2 = value2;
     $("#textInput2").val(value2);
 }
 
 
 
 
+/*
+
+var textValue1 = $("#textInput1").val();
+var value1 = parseInt(textValue1);
+var textValue2 = $("#textInput2").val();
+var value2 = parseInt(textValue2);
+let result;
+let count = 0;
+let choiceText = $("#operationSelect option:selected").text();
+let choiseVal = $("#operationSelect").val();
 
 
 
+$(function () {
+    init();
+});
+// Asetetaan satunnaisluvut sivun latauksen yhteydessä
+function init() {
+    $("#textInput1").val(randomInt(1, 10));
+    textValue1 = $("#textInput1").val();
+    value1 = parseInt(textValue1);
+    $("#textInput2").val(randomInt(1, 10));
+    textValue2 = $("#textInput2").val();
+    value2 = parseInt(textValue2);
+    $("#result").val(0);
+    $("#counter").html("Laskuja suoritettu " + count + " kpl");
+
+
+    $("#dialog").dialog({
+        autoOpen: false
+    })
+
+
+    alert("TERVETULOA LASKEMAAN");
+
+};
+
+let laske = new Laskin($("#textInput1".val()), $("#textInput2".val()), $("#operationSelect".val()));
+
+// Painikkeet:
+
+$("#addBtn1").click(laske.add1);
+$("#subsBtn1").click(laske.sub1);
+$("#addBtn2").click(lakse.add2);
+$("#subsBtn2").click(laske.sub2);
+$("#resultBtn").click(laske.counter);
+
+
+
+
+function randomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
 
 
 
@@ -164,35 +204,98 @@ function substrack2() {
 // LUOKKA LASKIN ----- EI VALMIS ;D
 
 class Laskin {
-    constructor(num1, num2, select) {
-        this.num1 = num1;
-        this.num2 = num2;
+    constructor(tex1, text2, select) {
+        this.text1 = text1;
+        this.text2 = text2;
         this.select = select;
     }
 
-    counter() {
-        return num1 + this.num2;
-    }
-}
+    add1() {
+        // textvalue1 = this.tex1.val();
+        value1 = parseInt(this.text1);
+        value1++;
 
-/*
-    // Ilmoitukset dialogiin:
-
-    // Nollalla jakaminen
-    function devideZero() {
-        if (value2 == 0) {
-            if (choiseVal == 4) {
-                window.alert("HUOM!! nollalla ei voi jakaa!");
-            }
+        if (value1 > 10 || value1 < 1) {
+            $("#dialog").dialog("open");
         }
+
+        $("#text1").val(value1);
+        console.log(value1);
+    };
+
+    sub1() {
+        textValue1 = $("#text1").val();
+        value1 = parseInt(textValue1);
+        value1--;
+
+        if (value1 > 10 || value1 < 1) {
+            $("#dialog").dialog("open");
+        }
+        $("#text1").val(value1);
+
+    };
+
+
+    add2() {
+
+        text2 = $("#text2").val();
+        value2 = parseInt(textValue2);
+        value2++;
+
+        if (value2 > 10 || value2 < 1) {
+            $("#dialog").dialog("open");
+        }
+
+        $("#text2").val(value2);
     }
 
-    $(function () {
-        $("#dialog").dialog();
-    });
+    sub2() {
+        text2 = this.text2.val();
+        value2 = parseInt(text2);
+        value2--;
 
-    $(".selector").dialog({
-        appendTo: "textInput2"
+        if (value2 < 1) {
+            $("#dialog").dialog("open");
+        }
+
+
+        this.text2.val(value2);
+    }
+
+
+    counter() {
+        let choiceText = $("#operationSelect option:selected").text();
+        let choiseVal = $("#operationSelect").val();
+
+        console.log(choiceText);
+        console.log(choiseVal);
+        console.log(value1 + value2);
+
+        switch (choiseVal) {
+            case "1":
+                result = value1 + value2;
+                break;
+            case "2":
+                result = value1 - value2;
+                break;
+            case "3":
+                result = value1 * value2;
+                break;
+            case "4":
+                result = value1 / value2;
+                break;
+            default:
+                result = "ERROR"
+        }
+
+
+        $("#result").html("Tulos: " + result);
+
+        count++;
+        $("#counter").html("Laskuja suoritettu " + count + " kpl");
+    }
+
+}
 
 
 */

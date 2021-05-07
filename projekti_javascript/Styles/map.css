@@ -1,9 +1,6 @@
-.container{
-    display:grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 iframe{
     margin:8px;
 }
@@ -19,4 +16,11 @@ button{
 
 button:hover{
     background-color: rgb(77, 26, 26);
+}
+
+h1{
+    margin-left: 5em;
+    color: blueviolet;
+    letter-spacing: 9px;
+    
 }

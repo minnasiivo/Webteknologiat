@@ -3,23 +3,41 @@
 
 <head>
 
-    <title>Hello World!!</title>
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles.css" />
+    <title>Kurssi tehtävät</title>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/indeksStyles.css">
 
 </head>
 
 <body onload="init()">
     <script defer src="script/helloWorld.js"></script>
-    <p>
+    <h>
         Webteknologiat kurssin javaScript -tehtävät
-    </p>
-    <div>Kartta </div>
-    <div>Laskin</div>
-    <div>Media elementti</div>
-    <div>Näkymien vaihtaminen</div>
-    <div>Ajax -harjoitus</div>
-    <button>&#128151;</button>
-    <p>&#128512;</p>
+    </h>
+    <div id="navBar">
+        <ul>
+            <li><a href="indeks.html">Home</a></li>
+            <li><a href="map.html">Kartta</a></li>
+            <li><a href="laskin.html">Laskin</a></li>
+            <li><a href="media.html">Kuvien karuselli</a></li>
+            <li><a href="vaihtuva_nakyma.html">Näkymien vaihtaminen</a></li>
+            <li><a href="ajax.html">Ajax -harjoitus</a></li>
+        </ul>
+    </div>
+    <img src="media/computer_anim.gif">
+
+    <style>
+        h {
+            margin-top: 5px;
+            padding: 10px;
+            color: whitesmoke;
+            background-color: rgb(5, 63, 5);
+            font-size: xx-large;
+        }
+
+        img {
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>

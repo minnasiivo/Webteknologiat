@@ -5,16 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/laskin.css">
 
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/laskin.css">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/indeksStyles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <title>Laskuri</title>
 </head>
 
 <body onload="init();">
+    <div id="navBar">
+        <ul>
+            <li><a href="indeks.html">Home</a></li>
+            <li><a href="map.html">Kartta</a></li>
+            <li><a href="laskin.html">Laskin</a></li>
+            <li><a href="media.html">Kuvien karuselli</a></li>
+            <li><a href="vaihtuva_nakyma.html">Näkymien vaihtaminen</a></li>
+            <li><a href="ajax.html">Ajax -harjoitus</a></li>
+        </ul>
+    </div>
 
     <div class="container">
         <div class="head">
@@ -24,7 +37,9 @@
             </p1>
         </div>
 
-        <div id="dialogbox" title="Error">Value out of range!</div>
+        <div id="dialog" title="Error">
+            <p>Value out of range!</p>
+        </div>
 
         <div class="flex-container">
             <div class="A">

@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/map.css">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="Styles/indeksStyles.css">
     <title>Kartta</title>
 </head>
 
 <body onload="init()">
+    <div id="navBar">
+        <ul>
+            <li><a href="indeks.html">Home</a></li>
+            <li><a href="map.html">Kartta</a></li>
+            <li><a href="laskin.html">Laskin</a></li>
+            <li><a href="media.html">Kuvien karuselli</a></li>
+            <li><a href="vaihtuva_nakyma.html">Näkymien vaihtaminen</a></li>
+            <li><a href="ajax.html">Ajax -harjoitus</a></li>
+        </ul>
+    </div>
+    <div class="mapDiv">
+        <h1>KARTTA</h1>
+        <iframe id="map" title="map" width="600" height="450"
+            src="https://www.google.com/maps?q=Skinnarilankatu34lappeenranta&output=embed"></iframe>
 
-    <h1>KARTTA</h1>
-    <div class="container">
-        <div class="boxA">
-            <iframe id="map" title="map" width="600" height="450"
-                src="https://www.google.com/maps?q=Skinnarilankatu34lappeenranta&output=embed"></iframe>
-
-            <div class="search-info" id="input-container">
-                <label for="address">Katuosoite:</label>
-                <input type="text" id="address" class="label" name="address">
-                <label for="city">Kaupunki:</label>
-                <input type="text" id="city" class="label" name="city">
-                <button type="button" class="btn" onclick="search()">Hae</button>
-            </div>
-        </div <div class="boxB">
-        <h2>Aiemmin tehdyt haut:</h2>
-        <div class="searchHistory" id="searchHistory">
-            <p>Kadun nimi, Kaupunki</p>
-            <button type="button" class="btn" onclick="reSearch()">Näytä Kartalla</button>
+        <div class="search-info" id="input-container">
+            <label for="address">Katuosoite:</label>
+            <input type="text" id="address" class="label" name="address">
+            <label for="city">Kaupunki:</label>
+            <input type="text" id="city" class="label" name="city" onkeydown="enterPress(event)">
+            <button type="button" id="myBtn" class="btn" onclick="search()">Hae</button>
         </div>
     </div>
-    </div <script defer src="script/map.js">
-    </script>
+
+
+    <script defer src="script/map.js"></script>
 </body>
 
 </html>
